@@ -1,0 +1,1806 @@
+[
+    {
+        "id": "63b20dee50f75889",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4eeb2df7bd7d365f",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a54e741eb7504b23",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c306bb8b7d70abe9",
+        "type": "ui_tab",
+        "name": "Gas warning",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9c7b00b28e659be2",
+        "type": "ui_group",
+        "name": "Gas state",
+        "tab": "c306bb8b7d70abe9",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "72ba19341715a278",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "isrgrootx1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "6bc08c864f31ef9f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "25cc75707a0d4b5ba28127938feb1b9b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "5bf38d55c2f4e992",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5bf38d55c2f4e992",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "node-red",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Wifi list",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": 15,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Wifi",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6f9ddca6cc8f266d",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "9c7b00b28e659be2",
+        "order": 1,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "98eabf64189c8dab",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "9c7b00b28e659be2",
+        "order": 3,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "4f2ef509f965a2a8",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "dashboard_group",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f6a0f2a30c722d35",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "dashboard_group",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "64a2d04aa7780fd8",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "dashboard_group",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1e5fc274a96d3ac9",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "dashboard_group",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0805e296b3aa1352",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "dashboard_group",
+        "order": 21,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0f989c6424055b93",
+        "type": "ui_spacer",
+        "z": "4eeb2df7bd7d365f",
+        "name": "spacer",
+        "group": "dashboard_group",
+        "order": 25,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "eac0229b0dc63107",
+        "type": "ui_gauge",
+        "z": "63b20dee50f75889",
+        "name": "",
+        "group": "9c7b00b28e659be2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gas concentration",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "43ba53357e782647",
+        "type": "mqtt in",
+        "z": "63b20dee50f75889",
+        "name": "",
+        "topic": "gas_con",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "eac0229b0dc63107",
+                "afb2edafb819389a",
+                "78748910d848b574"
+            ]
+        ]
+    },
+    {
+        "id": "afb2edafb819389a",
+        "type": "ui_template",
+        "z": "63b20dee50f75889",
+        "group": "9c7b00b28e659be2",
+        "name": "",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "format": "<div id=\"circle\" style=\"\n    width: 50px; \n    height: 50px; \n    border-radius: 50%; \n    margin: auto; \n    background-color: green;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 20px;\n    color: white;\n    text-align: center;\n    font-weight: bold;\">\n    0%\n</div>\n<script>\n    (function(scope) {\n    let blinkInterval = null;\n\n    scope.$watch('msg.payload', function(data) {\n        var circle = document.getElementById('circle');\n        let percentage = parseInt(data, 10);\n\n        // Ensure data is a valid percentage\n        if (!isNaN(percentage) && percentage >= 0 && percentage <= 100) {\n            circle.textContent = `${percentage}%`;\n\n            if (percentage > 40) {\n                // Start blinking effect\n                if (!blinkInterval) {\n                    blinkInterval = setInterval(() => {\n                        circle.style.backgroundColor = \n                            circle.style.backgroundColor === 'red' ? 'transparent' : 'red';\n                    }, 500);\n                }\n            }\n            else if(percentage > 10){\n                if (blinkInterval) {\n                clearInterval(blinkInterval);\n                blinkInterval = null;\n                }\n                circle.style.backgroundColor = 'yellow';\n            }\n            else {\n                // Stop blinking and reset background color\n                if (blinkInterval) {\n                    clearInterval(blinkInterval);\n                    blinkInterval = null;\n                }\n                circle.style.backgroundColor = 'green';\n            }\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78748910d848b574",
+        "type": "function",
+        "z": "63b20dee50f75889",
+        "name": "function 1",
+        "func": "// Lấy giá trị từ input\nvar value = msg.payload;\n// Kiểm tra giá trị\nif (value > 40) {\n    // Lưu trạng thái cảnh báo\n    flow.set(\"alerting\", true);\n    msg.payload = \"Cảnh báo: Giá trị vượt quá 40%!\";\n    return msg;\n} else {\n    // Nếu giá trị dưới 40%, dừng cảnh báo\n    flow.set(\"alerting\", false);\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "6ecdbc84d8090534"
+            ]
+        ]
+    },
+    {
+        "id": "6ecdbc84d8090534",
+        "type": "delay",
+        "z": "63b20dee50f75889",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "0798c60fa293a218"
+            ]
+        ]
+    },
+    {
+        "id": "0798c60fa293a218",
+        "type": "function",
+        "z": "63b20dee50f75889",
+        "name": "function 2",
+        "func": "// Kiểm tra trạng thái cảnh báo\nif (flow.get(\"alerting\") === true) {\n    msg.payload = \"Warning\";\n    return msg;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "c77593339e155466",
+                "6ecdbc84d8090534"
+            ]
+        ]
+    },
+    {
+        "id": "c77593339e155466",
+        "type": "ui_audio",
+        "z": "63b20dee50f75889",
+        "name": "",
+        "group": "9c7b00b28e659be2",
+        "voice": "Microsoft David - English (United States)",
+        "always": "",
+        "x": 660,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0dbb2c4df73fac4c",
+        "type": "ui_text_input",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "label": "SSID",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "0dd502148f0f7af1"
+            ]
+        ]
+    },
+    {
+        "id": "9e0271def8e70aeb",
+        "type": "ui_text_input",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 6,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "56d3b2d16c5cabf3"
+            ]
+        ]
+    },
+    {
+        "id": "207cfeef51c1298e",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi1/status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "83a42194d46dd3a2"
+            ]
+        ]
+    },
+    {
+        "id": "76e5e8044f518a71",
+        "type": "ui_text",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Wifi 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 190,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "83a42194d46dd3a2",
+        "type": "ui_template",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "name": "status1",
+        "order": 4,
+        "width": 1,
+        "height": 1,
+        "format": "<div id=\"circle1\" style=\"\n    width: 20px; \n    height: 20px; \n    border-radius: 50%; \n    margin: auto; \n    background-color: red;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 10px;\n    color: white;\">\n    OFF\n</div>\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        var circle = document.getElementById('circle1');\n        if (data === 'ON') {\n            circle.style.backgroundColor = 'green';\n            circle.textContent = 'ON';\n        } else if (data === 'OFF') {\n            circle.style.backgroundColor = 'red';\n            circle.textContent = 'OFF';\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 500,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1705d791686ea2d3",
+        "type": "ui_text",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "order": 10,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Wifi 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 190,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "103cfc895636eb28",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ssid1",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "96ee25759d9ca633"
+            ]
+        ]
+    },
+    {
+        "id": "0dd502148f0f7af1",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ssid1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "139a1897df8f4f9d",
+        "type": "ui_button",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "group": "dashboard_group",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "change",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "103cfc895636eb28",
+                "e78a34a4db9d1a90",
+                "18782a0d79f5a56f"
+            ]
+        ]
+    },
+    {
+        "id": "98072da7758c2627",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi1/ssid",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 40,
+        "wires": [
+            [
+                "b82940d3dcde381c"
+            ]
+        ]
+    },
+    {
+        "id": "e78a34a4db9d1a90",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pass1",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "d9296683b0beb87f"
+            ]
+        ]
+    },
+    {
+        "id": "b56219668325a886",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi1/pass",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "04560a6a3d0b3bd8"
+            ]
+        ]
+    },
+    {
+        "id": "04560a6a3d0b3bd8",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pass1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56d3b2d16c5cabf3",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pass1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18782a0d79f5a56f",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "delete",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "9e0271def8e70aeb"
+            ]
+        ]
+    },
+    {
+        "id": "96ee25759d9ca633",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi1/changessid",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 600,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d9296683b0beb87f",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi1/changepass",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 610,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "81056450427766c7",
+        "type": "ui_text_input",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "label": "SSID",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 14,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 720,
+        "wires": [
+            [
+                "5b0e573e672bce55"
+            ]
+        ]
+    },
+    {
+        "id": "35603d8fe15f6eb1",
+        "type": "ui_text_input",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 15,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 540,
+        "y": 840,
+        "wires": [
+            [
+                "d622a41bcf23a225"
+            ]
+        ]
+    },
+    {
+        "id": "02d6d9d2e32c3c49",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ssid2",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "ee3d96ca0d8edd11"
+            ]
+        ]
+    },
+    {
+        "id": "5b0e573e672bce55",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ssid2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e34cb8813fc6843",
+        "type": "ui_button",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "group": "dashboard_group",
+        "order": 17,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "change",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 920,
+        "wires": [
+            [
+                "02d6d9d2e32c3c49",
+                "db9c41dcd703ab12",
+                "8ee28f638d960ffa"
+            ]
+        ]
+    },
+    {
+        "id": "c9c70b247121c9c6",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi2/ssid",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "1c9234f6921b597d"
+            ]
+        ]
+    },
+    {
+        "id": "db9c41dcd703ab12",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pass2",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 980,
+        "wires": [
+            [
+                "3ca8acf309aa41b7"
+            ]
+        ]
+    },
+    {
+        "id": "90c1adf3096fa56d",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi2/pass",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 780,
+        "wires": [
+            [
+                "d1048aa9a26d0e34"
+            ]
+        ]
+    },
+    {
+        "id": "d1048aa9a26d0e34",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pass2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ee28f638d960ffa",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "delete",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "35603d8fe15f6eb1"
+            ]
+        ]
+    },
+    {
+        "id": "ee3d96ca0d8edd11",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi2/changessid",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 600,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "3ca8acf309aa41b7",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi2/changepass",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 610,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d622a41bcf23a225",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pass2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dea9ed6e660bfd1d",
+        "type": "ui_button",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "group": "dashboard_group",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "connect",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 60,
+        "y": 440,
+        "wires": [
+            [
+                "895bd0790409972b",
+                "139a1897df8f4f9d"
+            ]
+        ]
+    },
+    {
+        "id": "895bd0790409972b",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi/connect",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 190,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "eb41ccdc2bbe8eac",
+        "type": "ui_button",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "group": "dashboard_group",
+        "order": 18,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "connect",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "2",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 60,
+        "y": 1060,
+        "wires": [
+            [
+                "75cc0001c5ba5ca2",
+                "9e34cb8813fc6843"
+            ]
+        ]
+    },
+    {
+        "id": "75cc0001c5ba5ca2",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi/connect",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 190,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "794a3e269e233a0e",
+        "type": "ui_text",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "order": 19,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Wifi 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 170,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "d6e5329af17e5248",
+        "type": "ui_text_input",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "label": "SSID",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 23,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 370,
+        "y": 1360,
+        "wires": [
+            [
+                "8e0e790ec3fbf286"
+            ]
+        ]
+    },
+    {
+        "id": "1f4ef43b4203c4a7",
+        "type": "ui_text_input",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "label": "Password",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 24,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "password",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 500,
+        "y": 1480,
+        "wires": [
+            [
+                "cb2db1ab45709507"
+            ]
+        ]
+    },
+    {
+        "id": "0276a9699768687c",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ssid3",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1560,
+        "wires": [
+            [
+                "b85f65ae17d2c32e"
+            ]
+        ]
+    },
+    {
+        "id": "8e0e790ec3fbf286",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ssid3",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23c24b4b1a4e258b",
+        "type": "ui_button",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "group": "dashboard_group",
+        "order": 26,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "change",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 1560,
+        "wires": [
+            [
+                "0276a9699768687c",
+                "a673b7706dce22db",
+                "781794c101665692"
+            ]
+        ]
+    },
+    {
+        "id": "c1c35569faba5f8d",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi3/ssid",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 1300,
+        "wires": [
+            [
+                "21b3804b3fcd953f"
+            ]
+        ]
+    },
+    {
+        "id": "a673b7706dce22db",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pass3",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1620,
+        "wires": [
+            [
+                "1772058579e471a2"
+            ]
+        ]
+    },
+    {
+        "id": "3fd9b30680c4301e",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi3/pass",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1420,
+        "wires": [
+            [
+                "4da38a347f871e9f"
+            ]
+        ]
+    },
+    {
+        "id": "4da38a347f871e9f",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pass3",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "781794c101665692",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "delete",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 1480,
+        "wires": [
+            [
+                "1f4ef43b4203c4a7"
+            ]
+        ]
+    },
+    {
+        "id": "b85f65ae17d2c32e",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi3/changessid",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 580,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "1772058579e471a2",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi3/changepass",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 590,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "cb2db1ab45709507",
+        "type": "change",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pass3",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27c8587ce2d16556",
+        "type": "ui_button",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "group": "dashboard_group",
+        "order": 27,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "connect",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "3",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 60,
+        "y": 1740,
+        "wires": [
+            [
+                "152295c374b6d087",
+                "23c24b4b1a4e258b"
+            ]
+        ]
+    },
+    {
+        "id": "152295c374b6d087",
+        "type": "mqtt out",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi/connect",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6bc08c864f31ef9f",
+        "x": 190,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "b82940d3dcde381c",
+        "type": "ui_text",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 530,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1c9234f6921b597d",
+        "type": "ui_text",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "order": 11,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "21b3804b3fcd953f",
+        "type": "ui_text",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "order": 20,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "f53a8753a9a18b35",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi2/status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 1080,
+        "wires": [
+            [
+                "b4dd25f842c28afe"
+            ]
+        ]
+    },
+    {
+        "id": "b4dd25f842c28afe",
+        "type": "ui_template",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "name": "status2",
+        "order": 13,
+        "width": 1,
+        "height": 1,
+        "format": "<div id=\"circle2\" style=\"\n    width: 20px; \n    height: 20px; \n    border-radius: 50%; \n    margin: auto; \n    background-color: red;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 10px;\n    color: white;\">\n    OFF\n</div>\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        var circle = document.getElementById('circle2');\n        if (data === 'ON') {\n            circle.style.backgroundColor = 'green';\n            circle.textContent = 'ON';\n        } else if (data === 'OFF') {\n            circle.style.backgroundColor = 'red';\n            circle.textContent = 'OFF';\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 500,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "394ff5520b1cc7a2",
+        "type": "mqtt in",
+        "z": "4eeb2df7bd7d365f",
+        "name": "",
+        "topic": "wifi3/status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "6bc08c864f31ef9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 1740,
+        "wires": [
+            [
+                "2d15aff825c8296e"
+            ]
+        ]
+    },
+    {
+        "id": "2d15aff825c8296e",
+        "type": "ui_template",
+        "z": "4eeb2df7bd7d365f",
+        "group": "dashboard_group",
+        "name": "status3",
+        "order": 22,
+        "width": 1,
+        "height": 1,
+        "format": "<div id=\"circle3\" style=\"\n    width: 20px; \n    height: 20px; \n    border-radius: 50%; \n    margin: auto; \n    background-color: red;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 10px;\n    color: white;\">\n    OFF\n</div>\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        var circle = document.getElementById('circle3');\n        if (data === 'ON') {\n            circle.style.backgroundColor = 'green';\n            circle.textContent = 'ON';\n        } else if (data === 'OFF') {\n            circle.style.backgroundColor = 'red';\n            circle.textContent = 'OFF';\n        }\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 520,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    }
+]
