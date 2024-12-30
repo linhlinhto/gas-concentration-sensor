@@ -138,3 +138,12 @@ Dự án này sử dụng ESP32 kết hợp với cảm biến MQ-9 để đo n�
 ## Video thử nghiệm thiết bị
 - Do để thử nghiệm và không phải chờ video quá lâu nên code đã  được đổi thành sleep 10 giây thay vì sleep 5 phút. Trong thực tế không phải lúc nào gas cũng rò rỉ vì thế để esp ở chế độ ngủ 5 phút sau đó kiểm tra 1 lần giúp đảm bảo tuổi thọ thiết bị.
 
+https://github.com/user-attachments/assets/54286343-2f1b-4d04-a0d0-d01f260074a2
+
+
+https://github.com/user-attachments/assets/7dde99ef-9c4e-4469-b829-fd93c07c0367
+
+
+https://github.com/user-attachments/assets/0ee0009f-debe-48fd-9a12-138b70edb52f
+
+
