@@ -1,4 +1,4 @@
-# Dự án Đo Nồng Độ Khí Gas sử dụng ESP32
+# Dự án Chế Tạo Thiết Bị Đo Và Cảnh Báo Nồng Độ Khí Gas
 
 ## Giới thiệu
 
